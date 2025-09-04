@@ -11,7 +11,7 @@
 <body class = "font-sans antialiased">
 <div class = "px-6 py-6 flex flex-col items-center justify-center bg-gray-50 text-black-50">
 
-    <h1 class = "text-3xl font-semibold mb-16">Student Management System</h1>
+    <h1 class = "text-3xl font-semibold mb-10">Student Management System</h1>
     
     <form method="POST" action = "{{route('saveStudent') }}" accept-charset="UTF-8" class="flex flex-col gap-4">
     {{ csrf_field() }}  
