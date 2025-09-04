@@ -8,7 +8,7 @@
 <body>
 
 <h1>Student Management System</h1>
-<form method="POST" action = "{{ route("saveStudent") }}">
+<form method="POST" action = "{{route('saveStudent') }}" accept-charset="UTF-8">
     {{ csrf_field() }}
     <label for = "id_email">Email:</label>
     <input type ="email" id = "id_email" name = "name_email">
