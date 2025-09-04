@@ -23,6 +23,6 @@ class StudentController extends Controller
         $newStudent->password = $request->name_password;
         $newStudent->save(); //inserts the student into the students table.
 
-        return redirect("/studentmgt"); //After saving, it sends the user back to /studentmgt (probably where your form or list of students is).
+        return redirect("/studentmgt") -> with('status', 'Student account created successfully!'); //After saving, it sends the user back to /studentmgt with a success message (Session).
     }
 }

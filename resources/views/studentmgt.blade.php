@@ -21,6 +21,10 @@
         <input type="password" id ="id_password" name ="name_password" class ="border-2 border-black p-2 rounded">
         <input type = "submit" value ="Submit" class = "bg-black text-white px-4 py-2 rounded">
     </form>  
+
+    @if (session("status"))
+        <p class = "mt-2 text-green-600 font-semibold">{{ session("status") }}</p>
+    @endif
 </div>  
 
 
