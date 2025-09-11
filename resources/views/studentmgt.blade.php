@@ -58,7 +58,7 @@
                     <input type = "password" name = "name_password" value = {{ $itemStudent->password }}>
                 </td>
                 <td>
-                    {{ $itemstudent->created_at }}
+                    {{ $itemStudent->created_at }}
                 </td>
                 <td>
                     {{ $itemStudent->updated_at }}
@@ -69,7 +69,7 @@
             </form>
 
                 <td>
-                    <form action = "POST" method="{{ route("deleteStudent", $itemStudent->id) }}">
+                    <form action = "{{ route("deleteStudent", $itemStudent->id) }}"  method="POST">
                     {{ csrf_field() }}
                         <input type = "submit" value = "Delete">
                     </form>
@@ -106,6 +106,18 @@
                 </td>
             </form>
 </table>
+
+@if (session("status_save"))
+        <p>{{ session("status_save") }}</p>
+@endif
+
+@if(session("status_delete"))
+        <p>{{ session("status_delete") }}</p>
+@endif
+
+@if(session("status_update"))
+        <p>{{ session("status_update") }}</p>
+@endif
 
 
 

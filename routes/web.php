@@ -51,3 +51,6 @@ Route::post("/saveStudentRoute", [StudentController::class, "saveStudent"])->nam
 //Route post for UPDATE via controller:
 Route::post("/updateStudentRoute/{id}", [StudentController::class, "updateStudent"])->name("updateStudent");
 
+//Route post for DELETE via controller:
+Route::post("/deleteStudentRoute/{id}", [StudentController::class, "deleteStudent"])->name("deleteStudent");
+
