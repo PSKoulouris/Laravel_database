@@ -76,6 +76,35 @@
                 </td>
         </tr>
         @endforeach 
+
+        <tr>
+            <form method = "POST" action = "{{ route("saveStudent") }}">
+                {{ csrf_field() }}
+                <td> 
+                    -
+                </td>
+                <td>
+                    <input type = "email" name = "name_email">
+                </td>
+                <td>
+                    <input type = "password" name = "name_password">
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <input type = "submit" value = "Submit">
+                </td>
+            </form>
+        </tr>
+            <form method = "GET" action ="{{ route("allStudent") }}" >
+                <td>
+                    <input type = "submit" value = "Refresh">
+                </td>
+            </form>
 </table>
 
 
