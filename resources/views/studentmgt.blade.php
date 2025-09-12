@@ -119,18 +119,5 @@
         <p>{{ session("status_update") }}</p>
 @endif
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

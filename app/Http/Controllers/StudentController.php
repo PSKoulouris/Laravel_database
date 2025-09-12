@@ -38,7 +38,7 @@ class StudentController extends Controller
 
     //Function to refresh page with updated data
     public function allStudent(){
-        return view("/studentmgt", ["listStudent"=> Student::all()]); 
+        return view("/studentmgt", ["listStudent"=> Student::all()]); //=> inside [ ... ] = array key => value mapping.
         //return the view blade.php with all data from students table defined in model Student. data are returned in a collection of Students objects
         //stored in the variable named listStudent ($listStudent in blade.php). Student::all() equivalent to SELECT * FROM students
     }

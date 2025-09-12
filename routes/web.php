@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\JoinController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,3 +55,11 @@ Route::post("/updateStudentRoute/{id}", [StudentController::class, "updateStuden
 //Route post for DELETE via controller:
 Route::post("/deleteStudentRoute/{id}", [StudentController::class, "deleteStudent"])->name("deleteStudent");
 
+
+//Routes for joinmgt tables students and assignments:
+
+Route::get("/joinmgt", function(){
+    return view("joinmgt");
+});
+
+Route::post("/saveJoinRoute", [JoinController::class, "saveJoin"])->name("saveJoin");
