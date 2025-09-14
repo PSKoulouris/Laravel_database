@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,6 +18,13 @@ class JoinController extends Controller
         try {
             //Begin transaction:
             DB::beginTransaction();
+
+            //create new student object:
+            $newStudent = new Student;
+
+            
+
+            
 
             //Save data to databse:
             DB::commit();
