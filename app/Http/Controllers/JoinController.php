@@ -24,7 +24,7 @@ class JoinController extends Controller
 
             
 
-            
+            //
 
             //Save data to databse:
             DB::commit();
